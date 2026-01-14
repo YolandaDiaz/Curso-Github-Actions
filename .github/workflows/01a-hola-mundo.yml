@@ -1,0 +1,10 @@
+name: 01a Hola mundo
+on:
+  workflow_dispatch:   # Lanzamos el workflow de forma manual
+jobs:
+  # This workflow contains a single job called "hola-mundo"
+  hola-mundo:   # Nombre del job
+    runs-on: ubuntu-latest      # The type of runner that the job will run on
+    steps:
+    - name: Saludo
+      run: echo "¡Hola, mundo!"
