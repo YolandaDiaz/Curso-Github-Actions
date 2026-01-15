@@ -1,6 +1,8 @@
 name: 02 Evento issue
 on:
   push:  # Se lanza el workflow al hacer un push  
+    paths-ignore:
+      - '*.md'  #excepto si es sobre un archivo .md
   issues: 
     types:
       - opened   # Se lanza el workflow al crear una issue
