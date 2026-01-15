@@ -1,0 +1,15 @@
+name: 03b - build node application
+on:
+  push: #se dispara al hacer push sobre la rama main
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4  # hacer checkout del código
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4   # coordenadas = owner del repo / repo @ versión
+        with:  # inputs de parámetros
+          node-version: 20
+      - run: npm ci  # construcción
+      - run: npm test   # lanzar pruebas
