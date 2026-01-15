@@ -3,7 +3,7 @@ on:
   push:  # Se lanza el workflow al hacer un push  
   issues: 
     types:
-      - created   # Se lanza el workflow al crear una issue
+      - opened   # Se lanza el workflow al crear una issue
 jobs:
   # This workflow contains a single job called "hola-mundo"
   Crear-issue:   # Nombre del job
